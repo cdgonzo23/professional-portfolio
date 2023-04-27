@@ -3,13 +3,16 @@
 }
 
 :root {
-    --dark: rgb(11, 36, 65);
+    --dark: rgb(7, 24, 43);
     --light: whitesmoke;
     --splash: rgb(255, 234, 50);
 }
 
 body {
-    background-color: var(--dark); 
+    background-image: linear-gradient(
+        rgb(255, 234, 50) 0%,
+        rgb(224, 220, 170) 100%
+    );
     padding: 0;
     margin: 0;
 }
@@ -17,22 +20,18 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    /* border-bottom: 1px solid var(--dark); */
-    background-image: linear-gradient(
-        rgb(224, 220, 170) 0%,
-        rgb(255, 234, 50) 100%
-    );
+    color: var(--dark);
 }
 
 header h1 {
-    margin-left: 20px;
+    margin-left: 90px;
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
     align-items: end;
-    margin-right: 20px;
+    margin-right: 90px;
 }
 
 nav a {
@@ -40,6 +39,7 @@ nav a {
     color: var(--dark);
     margin: 4px 8px 8px 6px;
     font-size: 20px;
+    padding: 5px;
 }
 
 nav a:hover {
@@ -48,25 +48,44 @@ nav a:hover {
     background-color: var(--dark);
 }
 
+html {scroll-behavior: smooth;}
+
 main {
     max-width: 88%;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--light);
-    color: var(--dark);
+    background-image: linear-gradient(
+        rgb(52, 73, 121) 0%,
+        rgb(7, 24, 43) 100%
+    );
+    color: var(--splash);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-left: 4px solid var(--splash);
-    border-right: 4px solid var(--splash);
+    border: 4px solid var(--dark);
+    border-radius: 15px;
 }
 
 section {
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+
+.about {
+    border-bottom: 2px dashed var(--splash);
+    padding-bottom: 20px;
 }
 
 .about div {
     margin-left: 30px;
+}
+
+p {
+    margin-right: 30px;
+    background-color: var(--splash);
+    color: var(--dark);
+    padding: 20px;
+    border: 4px solid var(--dark);
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px var(--dark);
 }
 
 .selfie {
@@ -74,20 +93,24 @@ section {
     width: 150px;
     border: 4px solid var(--dark);
     border-radius: 7px;
+    box-shadow: 1px 1px 5px var(--dark);
 }
 
 .work {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    margin-left: 30px;
+    border-right: 4px solid var(--splash);
+    padding: 30px;
+    min-height: 700px;
 }
 
 .work-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    margin-left: 30px;
+    margin: 30px
 }
 
 .work-item {
@@ -101,8 +124,15 @@ section {
    background-repeat: no-repeat;
    flex-basis: calc(50% - 1em);
    margin: 5px;
-   border: 4px solid var(--dark);
+   border: 4px solid var(--splash);
    border-radius: 8px;
+   box-shadow: 5px 5px 5px var(--splash);
+   transition: all 0.5s ease-in-out;
+}
+
+.work-item:hover {
+    box-shadow: none;
+    border-color: var(--dark);
 }
 
 .featured {
@@ -111,11 +141,11 @@ section {
    background-image: url(../images/Horiseon\ SEO\ _\ Search\ Engine\ Optimization.jpg);
 }
 
-.cheat{
+.cheat {
     background-image: url(../images/CSS\ Snippet\ Cheat\ Sheet.jpg);
 }
 
-.prework{
+.prework {
     background-image: url(../images/Prework\ Study\ Guide.jpg);
 }
 
@@ -126,45 +156,47 @@ section {
     color: var(--light);
     border: 4px solid var(--splash);
     border-radius: 8px;
+    box-shadow: 2px 2px 5px;
 }
-/* 
-
-.fluid-img {
-    border: 4px solid var(--splash);
-    width: 100%;
-    padding: 8px;
-}
-
- */
 
 footer {
     display: flex;
-    background-image: linear-gradient(
-        rgb(255, 234, 50) 0%,
-        rgb(224, 220, 170) 100%
-    );
-    border-top: 1px solid var(--dark);
-}
-
-.contact {
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
 }
 
-.contact-links {
-    display: flex;
+footer div a {
     text-decoration: none;
     color: var(--dark);
-    margin: 4px 8px 2px 6px;
+    margin: 4px 8px 8px 6px;
+    font-size: 20px;
 }
 
-.contact-links:hover {
+footer div a:hover {
     text-decoration: underline;
-    color: var(--dark);
+}
+
+@media screen and (max-width: 940px) {
+    .work-item {
+        width: 100%;
+        max-height: 100px;
+    }
 }
 
 @media screen and (max-width: 576px) {
     .work-item {
         width: 100%;
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .work-item {
+        width: 100%;
+    }
+
+    footer div a {
+        font-size: 18px;
     }
 }
