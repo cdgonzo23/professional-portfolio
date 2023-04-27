@@ -15,23 +15,20 @@ body {
     );
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: var(--dark);
-}
-
-header h1 {
-    margin-left: 90px;
+    width: 100%;
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
     align-items: end;
-    margin-right: 90px;
 }
 
 nav a {
@@ -45,7 +42,7 @@ nav a {
 nav a:hover {
     text-decoration: underline;
     color: var(--splash);
-    background-color: var(--dark);
+    background-color: rgba(26, 26, 95, 0.916);
 }
 
 html {scroll-behavior: smooth;}
@@ -67,6 +64,7 @@ main {
 section {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .about {
@@ -78,9 +76,12 @@ section {
     margin-left: 30px;
 }
 
-p {
+.about-text {
     margin-right: 30px;
-    background-color: var(--splash);
+    background-image: linear-gradient(
+        rgb(255, 234, 50) 0%,
+        rgb(224, 220, 170) 100%
+    );
     color: var(--dark);
     padding: 20px;
     border: 4px solid var(--dark);
@@ -109,8 +110,7 @@ p {
 .work-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 30px
+    margin: 30px 30px 30px 100px
 }
 
 .work-item {
@@ -153,7 +153,7 @@ p {
     margin: 16px;
     padding: 8px;
     background-color: var(--dark);
-    color: var(--light);
+    color: var(--splash);
     border: 4px solid var(--splash);
     border-radius: 8px;
     box-shadow: 2px 2px 5px;
@@ -177,26 +177,68 @@ footer div a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 970px) {
     .work-item {
-        width: 100%;
-        max-height: 100px;
+        min-width: 200px;
+    }
+
+    .featured {
+        max-width: 500px;
+        min-height: 400px;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .work-item {
-        width: 100%;
-        max-height: 100px;
-    }
-}
 
-@media screen and (max-width: 400px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        display: flex;
+        min-width: 300px;
+        text-align: center;
+        margin: 10px;
+    }
+
+    nav {
+        margin: auto;
+    }
+
+    .about {
+        align-items: flex-start;
+    }
+
+    .about div {
+        margin: 5px;
+    }
+
+    .selfie {
+        height: 100px;
+        width: 100px;
+    }
+
+    .work {
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .work-items {
+        margin: 15px;
+        margin-right: 65px;
+    }
+
     .work-item {
-        width: 100%;
+        margin: 5px;
+        min-height: 150px;
+    }
+
+    .featured {
+        min-height: 200px;
     }
 
     footer div a {
-        font-size: 18px;
+        font-size: 14px;
     }
 }
