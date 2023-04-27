@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,45 +10,62 @@
 </head>
 
 <body>
+    <header>
+        <h1>Christian Gonzales Portfolio</h1>
+        
+        <nav>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
     <main>
-        <header>
-            <h1>Christian Gonzales Portfolio</h1>
-            <img class="selfie" src="./assets/images/selfie.jpg" alt="selfie" />
-            <nav>
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-        <section>
-            <h2 id="about">About</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ducimus minima explicabo, accusamus quam voluptatem. Qui delectus a accusantium porro, quidem nisi repellendus, nam, minus doloremque consequatur neque ipsa repudiandae.
-            </p>
+        <section id="about" class="about">
+            <div>
+                <h2>About</h2>
+                <img class="selfie" src="./assets/images/selfie.jpg" alt="selfie" />
+            </div>
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ducimus minima explicabo, accusamus
+                    quam voluptatem. Qui delectus a accusantium porro, quidem nisi repellendus, nam, minus doloremque
+                    consequatur neque ipsa repudiandae.
+                </p>
+               
+            </div>
         </section>
         <section>
-            <h2 id="work">Work</h2>
+            <div id="work" class="work">
+                <h2>Work</h2>
+            </div>
             <div class="work-items">
                 <a href="https://cdgonzo23.github.io/code-refactor-seo/" class="work-item featured">
-                    <p class="caption">Code Refactor</p>
-                    <img class="fluid-img" src="./assets/images/Horiseon SEO _ Search Engine Optimization.jpg" alt="challenge 1" />
+                    <div>
+                        <p class="caption">Code Refactor</p>
+                        <!-- <img class="fluid-img" src="./assets/images/Horiseon SEO _ Search Engine Optimization.jpg"
+                            alt="challenge 1" /> -->
+                    </div>
                 </a>
-                <a href="https://cdgonzo23.github.io/css-snippet-cheatsheet/" class="work-item">
+
+                <a href="https://cdgonzo23.github.io/css-snippet-cheatsheet/" class="work-item cheat">
                     <p class="caption">CSS Snippet Cheatsheet</p>
-                    <img class="fluid-img" src="./assets/images/CSS Snippet Cheat Sheet.jpg" alt="challenge 2" />
+                    <!-- <img class="fluid-img" src="./assets/images/CSS Snippet Cheat Sheet.jpg" alt="challenge 2" /> -->
                 </a>
-                <a href="https://cdgonzo23.github.io/prework-study-guide/" class="work-item">
+                <a href="https://cdgonzo23.github.io/prework-study-guide/" class="work-item prework">
                     <p class="caption">Pre-Work Study Guide</p>
-                    <img class="fluid-img" src="./assets/images/Prework Study Guide.jpg" alt="challenge 3" />
+                    <!-- <img class="fluid-img" src="./assets/images/Prework Study Guide.jpg" alt="challenge 3" /> -->
                 </a>
-            </a>
         </section>
-        <footer>
+    </main>
+    <footer>
+        <div class="contact">
             <h3 id="contact">Contact</h3>
+        </div>
+        <div class="contact-links">
             <a href="tel:202-555-0116">202-555-0116</a>
             <a href="mailto:cdgonzo42@gmal.com">cdgonzo42@gmail.com</a>
             <a href="https://github.com/cdgonzo23">GitHub</a>
-        </footer>
-    </main>
+        </div>
+    </footer>
 </body>
 
 </html>

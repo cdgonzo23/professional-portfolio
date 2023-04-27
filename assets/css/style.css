@@ -1,80 +1,133 @@
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 
 :root {
-    --dark: rgba(1, 38, 9, 0.8);
+    --dark: rgb(11, 36, 65);
     --light: whitesmoke;
-    --splash: rgb(60, 135, 191);
+    --splash: rgb(255, 234, 50);
 }
 
 body {
-    background-color: var(--dark)
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: var(--light);
-    color: var(--dark);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--dark); 
+    padding: 0;
+    margin: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    /* border-bottom: 1px solid var(--dark); */
+    background-image: linear-gradient(
+        rgb(224, 220, 170) 0%,
+        rgb(255, 234, 50) 100%
+    );
 }
 
-.selfie {
-    height: 10%;
-    width: 10%;
-    border: 4px solid var(--splash);
-    border-radius: 7px;
+header h1 {
+    margin-left: 20px;
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
+    align-items: end;
+    margin-right: 20px;
 }
 
 nav a {
     text-decoration: none;
     color: var(--dark);
-    margin: 4px 8px 20px 6px;
+    margin: 4px 8px 8px 6px;
+    font-size: 20px;
 }
 
 nav a:hover {
     text-decoration: underline;
     color: var(--splash);
+    background-color: var(--dark);
 }
 
-header,
-section,
-footer {
-    padding: 20px;
+main {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--light);
+    color: var(--dark);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-left: 4px solid var(--splash);
+    border-right: 4px solid var(--splash);
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about div {
+    margin-left: 30px;
+}
+
+.selfie {
+    height: 150px;
+    width: 150px;
+    border: 4px solid var(--dark);
+    border-radius: 7px;
+}
+
+.work {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .work-items {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 30px;
 }
 
 .work-item {
-    position: relative;
-    display: inline-block;
-    width: 49%;
+   min-height: 200px;
+   max-height: 200px;
+   min-width: 300px;
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-end;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   flex-basis: calc(50% - 1em);
+   margin: 5px;
+   border: 4px solid var(--dark);
+   border-radius: 8px;
 }
 
 .featured {
-    width: 100%;
+   min-height: 500px;
+   flex-basis: 100%;
+   background-image: url(../images/Horiseon\ SEO\ _\ Search\ Engine\ Optimization.jpg);
 }
+
+.cheat{
+    background-image: url(../images/CSS\ Snippet\ Cheat\ Sheet.jpg);
+}
+
+.prework{
+    background-image: url(../images/Prework\ Study\ Guide.jpg);
+}
+
+.caption {
+    margin: 16px;
+    padding: 8px;
+    background-color: var(--dark);
+    color: var(--light);
+    border: 4px solid var(--splash);
+    border-radius: 8px;
+}
+/* 
 
 .fluid-img {
     border: 4px solid var(--splash);
@@ -82,34 +135,32 @@ footer {
     padding: 8px;
 }
 
-.caption {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 16px;
-    padding: 8px;
-    background-color: var(--dark);
-    color: var(--light);
-    border: 4px solid var(--splash);
-}
+ */
 
 footer {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    background-image: linear-gradient(
+        rgb(255, 234, 50) 0%,
+        rgb(224, 220, 170) 100%
+    );
+    border-top: 1px solid var(--dark);
 }
 
-footer a {
-    display: inline;
-    justify-content: center;
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact-links {
+    display: flex;
     text-decoration: none;
     color: var(--dark);
     margin: 4px 8px 2px 6px;
 }
 
-footer a:hover {
+.contact-links:hover {
     text-decoration: underline;
-    color: var(--splash);
+    color: var(--dark);
 }
 
 @media screen and (max-width: 576px) {
