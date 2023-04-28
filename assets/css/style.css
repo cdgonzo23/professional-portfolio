@@ -25,16 +25,20 @@ header {
     width: 100%;
 }
 
+header h1 {
+    justify-content: flex-end;
+}
+
 nav {
     display: flex;
     justify-content: flex-end;
-    align-items: end;
+    align-items: flex-end;
 }
 
 nav a {
     text-decoration: none;
     color: var(--dark);
-    margin: 4px 8px 8px 6px;
+    margin: 4px 8px 3px 6px;
     font-size: 20px;
     padding: 5px;
 }
@@ -133,6 +137,7 @@ section {
 .work-item:hover {
     box-shadow: none;
     border-color: var(--dark);
+    filter: grayscale(50%)
 }
 
 .featured {
@@ -177,13 +182,13 @@ footer div a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1025px) {
     .work-item {
-        min-width: 200px;
+        min-width: 400px;
     }
 
     .featured {
-        max-width: 500px;
+        max-width: 400px;
         min-height: 400px;
     }
 }
@@ -221,7 +226,10 @@ footer div a:hover {
 
     .work {
         align-items: flex-start;
-        padding: 15px;
+        margin-left: 50px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 10px;
     }
 
     .work-items {
@@ -232,10 +240,13 @@ footer div a:hover {
     .work-item {
         margin: 5px;
         min-height: 150px;
+        min-width: 200px;
     }
 
     .featured {
-        min-height: 200px;
+        min-height: 275px;
+        min-width: 200px;
+        max-width: 200px;
     }
 
     footer div a {
